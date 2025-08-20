@@ -1,0 +1,42 @@
+{
+    "domains": [
+      {
+        "name": "RailUserManagement",
+        "subscriptions": []
+      },
+      {
+        "name": "RailSimulation",
+        "subscriptions": [{
+          "name": "RailApi",
+          "filterPolicy" : {
+            "op": ["INSERT", "UPDATE", "DELETE"],
+            "resource": [
+              "batch"
+            ]
+          }
+        }]
+      },
+      {
+        "name": "RailApi",
+        "subscriptions": [
+          {
+            "name": "RailSimulation",
+            "filterPolicy": {
+              "op": ["INSERT","UPDATE","DELETE","NOTIFY"],
+              "resource": [
+                "simulation",
+                "email"
+              ]
+            }
+          },
+          {
+            "name": "RailApi",
+            "filterPolicy" : {
+              "op": ["NOTIFY"],
+              "resource": ["email"]
+            }
+          }
+        ]
+      }
+    ]
+}

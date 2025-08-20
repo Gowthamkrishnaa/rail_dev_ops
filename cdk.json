@@ -1,0 +1,5 @@
+{
+    "app": "node -r dotenv/config cloudformation.js",
+    "requireApproval": "never",
+    "versionReporting": false
+  }

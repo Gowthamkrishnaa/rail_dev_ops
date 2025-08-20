@@ -1,0 +1,43 @@
+{
+    "partitionKey": {
+        "S": "customer"
+    },
+    "sortKey": {
+        "S": "customer_453c2512-fea2-5904-9951-c55a8e672050#"
+    },
+    "typeKey": {
+        "S": "customer"
+    },
+    "created": {
+        "S": "2022-01-01T00:00:00.000Z"
+    },
+    "modules": {
+        "L": [
+            {
+                "S": "rail"
+            },
+            {
+                "S": "dash"
+            }
+        ]
+    },
+    "name": {
+        "S": "Loram Technologies"
+    },
+    "showNistWarning": {
+        "BOOL": false
+    },
+    "id": {
+        "S": "453c2512-fea2-5904-9951-c55a8e672050"
+    },
+    "modified": {
+        "S": "2022-01-01T00:00:00.000Z"
+    },
+    "externalProviders": {
+        "L": [
+            {
+                "S": "RailSAML"
+            }
+        ]
+    }
+}

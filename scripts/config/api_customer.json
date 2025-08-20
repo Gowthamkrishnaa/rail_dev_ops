@@ -1,0 +1,71 @@
+{
+    "partitionKey": {
+      "S": "453c2512-fea2-5904-9951-c55a8e672050"
+    },
+    "sortKey": {
+      "S": "customer_453c2512-fea2-5904-9951-c55a8e672050"
+    },
+    "customerId": {
+      "S": "453c2512-fea2-5904-9951-c55a8e672050"
+    },
+    "dateCreated": {
+      "S": "2022-01-01T00:00:00.000Z"
+    },
+    "dateModified": {
+      "S": "2022-01-01T00:00:00.000Z"
+    },
+    "depthOfCut": {
+      "M": {
+        "maximum_depth_cut_per_pass_left": {
+          "N": "3.048"
+        },
+        "maximum_depth_cut_per_pass_right": {
+          "N": "3.048"
+        },
+        "max_grinding_passes": {
+          "N": "1"
+        },
+        "minimum_depth_cut_per_pass_left": {
+          "N": "1.524"
+        },
+        "minimum_depth_cut_per_pass_right": {
+          "N": "1.524"
+        }
+      }
+    },
+    "maxJobs": {
+      "N": "99"
+    },
+    "settings": {
+      "M": {
+        "wearWatchList": {
+          "M": {
+            "0": {
+              "S": "Life"
+            },
+            "1": {
+              "S": "Gross MGT"
+            },
+            "2": {
+              "S": "Top Wear"
+            },
+            "3": {
+              "S": "Lateral Wear"
+            },
+            "4": {
+              "S": "Combination Wear"
+            },
+            "5": {
+              "S": "Grinding Passes"
+            }
+          }
+        }
+      }
+    },
+    "typeKey": {
+      "S": "customer"
+    },
+    "vtiSimulations": {
+      "L": []
+    }
+  }

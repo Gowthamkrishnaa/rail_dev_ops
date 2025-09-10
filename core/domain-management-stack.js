@@ -1,3 +1,4 @@
+
 const cdk = require('aws-cdk-lib');
 const certificateManager = require('aws-cdk-lib/aws-certificatemanager');
 const route53 = require('aws-cdk-lib/aws-route53');
@@ -53,7 +54,7 @@ module.exports = class DomainStack extends cdk.Stack {
         });
 
         /* TODO: Enable CDK to assume a role and deploy resources accross accounts */
-        if( 'dev' === stackSuffix.toLowerCase() ) {
+        if( 'dev' === stackSuffix.toLowerCase() || 'stg' === stackSuffix.toLowerCase() ) {
             const apiDomainRecord = new route53.CfnRecordSet(this, 'RailPlatformAPIRecord', {
                 name: apiDomainName.domainName,
                 type: 'A',
@@ -76,7 +77,7 @@ module.exports = class DomainStack extends cdk.Stack {
         });
         
         /* TODO: Enable CDK to assume a role and deploy resources accross accounts */
-        if( 'dev' === stackSuffix.toLowerCase() ) {
+        if( 'dev' === stackSuffix.toLowerCase() || 'stg' === stackSuffix.toLowerCase() ) {
             const umDomainRecord = new route53.CfnRecordSet(this, 'RailUserManagementRecord', {
                 name: umDomainName.domainName,
                 type: 'A',
@@ -98,7 +99,7 @@ module.exports = class DomainStack extends cdk.Stack {
             },
         });
         /* TODO: Enable CDK to assume a role and deploy resources accross accounts */
-        if( 'dev' === stackSuffix.toLowerCase() ) {
+        if( 'dev' === stackSuffix.toLowerCase() || 'stg' === stackSuffix.toLowerCase() ) {
             const simulationDomainRecord = new route53.CfnRecordSet(this, 'RailSimulationRecord', {
                 name: simulationDomainName.domainName,
                 type: 'A',
